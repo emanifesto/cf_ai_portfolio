@@ -1,9 +1,21 @@
 @import 'tailwindcss';
 
-@layer base{
+@layer base {
 
 }
 
-@layer theme{
+@theme {
+    --color-dark-blue: #04174c;
+}
 
+@layer utilities {
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
