@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import OuterContainer from './components/container.tsx'
 import Navigation from './components/nav.tsx'
+import Links from './components/links.tsx'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <OuterContainer>
         <p>HI</p>
       </OuterContainer>
+      <Links />
     </main>
   )
 }
