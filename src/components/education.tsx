@@ -19,10 +19,10 @@ export function EducationL() {
 export function EducationR() {
     return (
         <div className="max-w-[90%] w-[60%] font-semibold pl-8 py-10">
-            <ul className='list-disc list-'>
+            <ul className='list-disc '>
                 <li>Junior at Kean University</li>
                 <li>Artificial Intelligence Major</li>
-                <li>GPA of 3.55</li>
+                <li>GPA of 3.55 (4.0 Scale)</li>
                 <li>Object-Oriented</li>
                 <li>Data Structures & Algorithms</li>
                 <li><HighlightBlue>Software Development</HighlightBlue></li>

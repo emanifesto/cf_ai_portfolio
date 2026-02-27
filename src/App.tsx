@@ -1,9 +1,9 @@
 import './App.css'
-import { ThemeProvider, useTheme } from './utils/ThemeContext.tsx'
+import { useState } from 'react'
 import OuterContainer, { InnerContainer } from './components/container.tsx'
 import Navigation from './components/nav.tsx'
 import Links from './components/links.tsx'
-import ThemeToggle from './components/ThemeToggle.tsx'
+import ThemeToggle from './components/toggle.tsx'
 import { HomeL, HomeR } from './components/home.tsx'
 import { EducationL, EducationR } from './components/education.tsx'
 import { ExperienceL, ExperienceR } from './components/experience.tsx'
@@ -11,14 +11,13 @@ import { ProjectsL, ProjectsR } from './components/projects.tsx'
 import { ExtracurricularsL, ExtracurricularsR } from './components/extracurriculars.tsx'
 import { SkillsL, SkillsR } from './components/skills.tsx'
 
-function AppContent() {
-  const { isDark } = useTheme()
+function App() {
+  const [dark, setTheme ] = useState<boolean>(false)
+  const toggleDark = () => setTheme(prev => !prev)
 
   return (
-    <main className={`h-screen text-xl overflow-scroll no-scrollbar transition-colors duration-500 ${isDark
-      ? 'bg-linear-to-b from-darker-blue to-dark-blue text-white'
-      : 'bg-off-white text-black'
-      }`}>
+    <main className={`h-screen text-xl overflow-scroll no-scrollbar transition-colors duration-500 dark:bg-darker-blue
+       dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
       <Navigation />
       <OuterContainer>
         <>
@@ -31,16 +30,8 @@ function AppContent() {
         </>
       </OuterContainer>
       <Links />
-      <ThemeToggle />
+      <ThemeToggle dark={dark} toggle={toggleDark}/>
     </main>
-  )
-}
-
-function App() {
-  return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
   )
 }
 
