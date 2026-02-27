@@ -9,7 +9,7 @@ import { EducationL, EducationR } from './components/education.tsx'
 function App() {
 
   return (
-    <main className='h-screen text-xl overflow-scroll no-scrollbar bg-radial from-dark-blue/85 to-dark-blue'>
+    <main className='h-screen text-xl overflow-scroll no-scrollbar bg-linear-to-b from-darker-blue to-dark-blue'>
       <Navigation />
       <OuterContainer >
         <>

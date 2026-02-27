@@ -1,12 +1,14 @@
 @import 'tailwindcss';
 
 @layer base {
-
+    :root{
+        letter-spacing: 0.125rem;
+    }
 }
 
 @theme {
     --color-dark-blue: #04174c;
-    --color-primary: linear-gradient(to right, #c97629, #d3832d);
+    --color-darker-blue: #041033;
     --animate-appear: appear 1s;
     --animate-disappear: disappear 1s;
     --animate-type: type 3s steps(15) infinite, caret 1s infinite;

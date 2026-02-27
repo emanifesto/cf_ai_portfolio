@@ -4,7 +4,7 @@ import NAAB from '../assets/kean/NAAB.webp'
 import MSC from '../assets/kean/MSC.jpg'
 import STEM from '../assets/kean/STEM.jpg'
 import { LoadingImage } from '../utils/loading.tsx'
-import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
+import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 
 export function EducationL(){
     const rng = Math.floor(Math.random() * 5)
@@ -18,8 +18,8 @@ export function EducationL(){
 
 export function EducationR(){
     return(
-        <div className="text-white max-w-[90%] w-[70%] font-semibold px-4 py-10 rounded-xl bg-linear-to-tr from-black/30 to-black/10">
-            <ul className='list-disc list-inside'>
+        <div className="max-w-[90%] w-[60%] font-semibold pl-8 py-10 rounded-xl bg-linear-to-br from-white/30 to-white/10 shadow-sm shadow-white">
+            <ul className='list-disc list-'>
                 <li>Junior at Kean University</li>
                 <li>Artificial Intelligence Major</li>
                 <li>GPA of 3.55</li>
