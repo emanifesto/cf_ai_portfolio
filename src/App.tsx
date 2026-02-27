@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import OuterContainer from './components/container.tsx'
+import OuterContainer, {InnerContainer} from './components/container.tsx'
 import Navigation from './components/nav.tsx'
 import Links from './components/links.tsx'
+import {HomeL, HomeR} from './components/home.tsx'
 
 function App() {
 
   return (
-    <main className='h-screen overflow-scroll no-scrollbar bg-radial from-dark-blue/85 to-dark-blue'>
+    <main className='h-screen text-xl overflow-scroll no-scrollbar bg-radial from-dark-blue/85 to-dark-blue'>
       <Navigation />
-      <OuterContainer>
-        <p>HI</p>
+      <OuterContainer >
+        <InnerContainer id="Home" Left={HomeL()} Right={HomeR()}/>
       </OuterContainer>
       <Links />
     </main>

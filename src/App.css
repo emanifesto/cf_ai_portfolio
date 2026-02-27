@@ -6,6 +6,29 @@
 
 @theme {
     --color-dark-blue: #04174c;
+    --color-primary: linear-gradient(to right, #c97629, #d3832d);
+    --animate-appear: appear 1s;
+    --animate-disappear: disappear 1s;
+
+    @keyframes appear{
+        0%{
+            visibility: visible;
+            opacity: 0;
+        },
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes disappear{
+        0%{
+            opacity: 1
+        },
+        100%{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
 }
 
 @layer utilities {

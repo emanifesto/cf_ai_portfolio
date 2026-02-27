@@ -1,7 +1,7 @@
 export default function Navigation(){
     const selected = "Home"
     return(
-        <div className="flex gap-7 rounded-full bg-black/20 backdrop-blur-3xl drop-shadow-xs drop-shadow-whie px-5 pb-3 pt-2 fixed top-4 left-[50%] translate-x-[-50%] border-black border-t-2 border-l-2">
+        <div className="flex gap-7 rounded-full bg-black/20 backdrop-blur-3xl drop-shadow-xs drop-shadow-whie px-5 pb-3 pt-2 fixed z-1 top-4 left-[50%] translate-x-[-50%] border-black border-t-2 border-l-2">
             <Section title="Home" selected={selected}/>
             <Section title="Education" selected={selected}/>
             <Section title="Experience" selected={selected}/>
