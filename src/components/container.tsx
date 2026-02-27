@@ -1,6 +1,6 @@
 import type { JSX } from "react"
 
-export default function OuterContainer({children}: {children: React.ReactElement}){
+export default function OuterContainer({children}: {children: JSX.Element}){
     return(
         <div className="h-[200vh]">
             {children}

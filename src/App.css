@@ -9,12 +9,13 @@
     --color-primary: linear-gradient(to right, #c97629, #d3832d);
     --animate-appear: appear 1s;
     --animate-disappear: disappear 1s;
+    --animate-type: type 3s steps(15) infinite, caret 1s infinite;
 
     @keyframes appear{
         0%{
             visibility: visible;
             opacity: 0;
-        },
+        }
         100%{
             opacity: 1;
         }
@@ -23,10 +24,28 @@
     @keyframes disappear{
         0%{
             opacity: 1
-        },
+        }
         100%{
             opacity: 0;
             visibility: hidden;
+        }
+    }
+
+    @keyframes type{
+        0%{
+            width: 0;
+        }
+        33%{
+            width: 50%
+        }
+        66%{
+            width:100%
+        }
+    }
+
+    @keyframes caret{
+        50%{
+            border-color: transparent;
         }
     }
 }
