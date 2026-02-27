@@ -6,19 +6,19 @@ import STEM from '../assets/kean/STEM.jpg'
 import { LoadingImage } from '../utils/loading.tsx'
 import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 
-export function EducationL(){
+export function EducationL() {
     const rng = Math.floor(Math.random() * 5)
-    const images= [GLAB, Hynes, NAAB, MSC, STEM]
+    const images = [GLAB, Hynes, NAAB, MSC, STEM]
     const image = images[rng]
-    
-    return(
+
+    return (
         <LoadingImage />
     )
 }
 
-export function EducationR(){
-    return(
-        <div className="max-w-[90%] w-[60%] font-semibold pl-8 py-10 rounded-xl bg-linear-to-br from-white/30 to-white/10 shadow-sm shadow-white">
+export function EducationR() {
+    return (
+        <div className="max-w-[90%] w-[60%] font-semibold pl-8 py-10">
             <ul className='list-disc list-'>
                 <li>Junior at Kean University</li>
                 <li>Artificial Intelligence Major</li>

@@ -9,6 +9,7 @@
 @theme {
     --color-dark-blue: #04174c;
     --color-darker-blue: #041033;
+    --color-off-white: #f5f5f0;
     --animate-appear: appear 1s;
     --animate-disappear: disappear 1s;
     --animate-type: type 3s steps(15) infinite, caret 1s infinite;
