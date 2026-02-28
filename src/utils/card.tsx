@@ -27,7 +27,7 @@ function ExpandIcon({ isOpen }: { isOpen: boolean }) {
 }
 
 export default function Card({ title, caption, date, children, isOpen, isHidden, onClick }: {
-    title: ReactNode, caption: ReactNode, date?: string, children: ReactNode,
+    title: ReactNode, caption?: ReactNode, date?: string, children: ReactNode,
     isOpen: boolean, isHidden: boolean, onClick: () => void
 }) {
 

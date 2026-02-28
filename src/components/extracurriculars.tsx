@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
+import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
 
 export function ExtracurricularsL() {
@@ -10,7 +10,8 @@ export function ExtracurricularsL() {
         <div className="max-w-[90%] w-[75%] font-semibold">
 
             <Card
-                title={<>Student Scholar |<HighlightRed>IUSE Scholar Academy Research Program</HighlightRed></>}
+                title={<Bold>Student Scholar</Bold>}
+                caption={<HighlightRed>IUSE Scholar Academy Research Program</HighlightRed>}
                 date="May 2025 – July 2025"
                 isOpen={expanded === 0} isHidden={expanded !== null && expanded !== 0}
                 onClick={() => toggle(0)}
@@ -22,7 +23,8 @@ export function ExtracurricularsL() {
             </Card>
 
             <Card
-                title={<>Undergraduate Researcher |<HighlightBlue>Freshman Research Initiative</HighlightBlue></>}
+                title={<Bold>Undergraduate Researcher</Bold>}
+                caption={<HighlightBlue>Freshman Research Initiative</HighlightBlue>}
                 date="May 2024 – July 2024"
                 isOpen={expanded === 1} isHidden={expanded !== null && expanded !== 1}
                 onClick={() => toggle(1)}
@@ -33,7 +35,7 @@ export function ExtracurricularsL() {
             </Card>
 
             <Card
-                title={<><HighlightRed>Presentations</HighlightRed></>}
+                title={<HighlightRed size='text-3xl'>Presentations</HighlightRed>}
                 isOpen={expanded === 2} isHidden={expanded !== null && expanded !== 2}
                 onClick={() => toggle(2)}
             >
@@ -43,6 +45,17 @@ export function ExtracurricularsL() {
                     <li>National Conference on Undergraduate Research (NCUR) 2025, Pittsburgh, PA (Apr. 2025)</li>
                 </ul>
             </Card>
+
+            <Card
+                title={<HighlightBlue size='text-3xl'>Piano</HighlightBlue>}
+                isOpen={expanded === 3} isHidden={expanded !== null && expanded !== 3}
+                onClick={() => toggle(3)}>
+
+                <ul className="list-disc pl-5 mt-1 text-base">
+                    <li>Got the chance to perform on a Steinway Grand Piano in front of a few people for a piano recital.</li>
+                </ul>
+            </Card>
+
         </div>
     )
 }

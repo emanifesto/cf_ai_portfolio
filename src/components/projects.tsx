@@ -19,7 +19,7 @@ export function ProjectsR() {
     return (
         <div className="max-w-[90%] w-[75%] font-semibold">
             <Card
-                title={<HighlightRed>Adobe Stock Metadata Automation</HighlightRed>}
+                title={<HighlightRed size="text-3xl">Adobe Stock Metadata Automation</HighlightRed>}
                 caption={<Bold>Published Chrome Extension</Bold>}
                 date="Feb. 2025 – Apr. 2025"
                 isOpen={expanded === 0} isHidden={expanded !== null && expanded !== 0}
@@ -37,7 +37,7 @@ export function ProjectsR() {
             </Card>
 
             <Card
-                title={<HighlightBlue>Hangman</HighlightBlue>}
+                title={<HighlightBlue size="text-3xl">Hangman</HighlightBlue>}
                 caption={<Bold>Work in progress!!!</Bold>}
                 date="Jan. 2026 – Present"
                 isOpen={expanded === 1} isHidden={expanded !== null && expanded !== 1}

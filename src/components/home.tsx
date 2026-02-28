@@ -6,7 +6,7 @@ export function HomeL() {
         <div className="tracking-wide text-center max-w-[90%] font-semibold px-4 py-10">
             <p>Hello, I'm </p>
             <HighlightRed size="text-6xl">Emmanuel Babayemi</HighlightRed>
-            <p className="dark:text-gray-400 text-gray-700 text- mt-10 w-[90%] mx-auto">
+            <p className="dark:text-gray-400 text-gray-700 mt-10 w-[90%] mx-auto">
                 A Software Developer with a specialization in
                 <HighlightBlue>TypeScript</HighlightBlue> and <HighlightBlue>React</HighlightBlue> development.
                 I am well-versed in deep learning and leveraging LLMs through API endpoints. Currently, I major
