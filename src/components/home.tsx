@@ -5,7 +5,7 @@ export function HomeL() {
     return (
         <div className="tracking-wide text-center max-w-[90%] font-semibold px-4 py-10">
             <p>Hello, I'm </p>
-            <h1><HighlightRed size="text-6xl">Emmanuel Babayemi</HighlightRed></h1>
+            <HighlightRed size="text-6xl">Emmanuel Babayemi</HighlightRed>
             <p className="dark:text-gray-400 text-gray-700 text- mt-10 w-[90%] mx-auto">
                 A Software Developer with a specialization in
                 <HighlightBlue>TypeScript</HighlightBlue> and <HighlightBlue>React</HighlightBlue> development.
@@ -19,6 +19,6 @@ export function HomeL() {
 
 export function HomeR() {
     return (
-        <img src={Headshot} className="rounded-full max-h-[60%] w-max aspect-square relative drop-shadow-lg drop-shadow-black " />
+        <img src={Headshot} alt="a picture of me" className="rounded-full max-h-[60%] w-max aspect-square relative drop-shadow-lg drop-shadow-black " />
     )
 }

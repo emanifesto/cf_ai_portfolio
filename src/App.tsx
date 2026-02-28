@@ -18,7 +18,9 @@ function App() {
   return (
     <main className={`h-screen text-xl overflow-scroll no-scrollbar transition-colors duration-500 dark:bg-darker-blue
        dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
-      <Navigation />
+      <Navigation>
+        <ThemeToggle dark={dark} toggle={toggleDark}/>
+      </Navigation>
       <OuterContainer>
         <>
           <InnerContainer id="Home" Left={<HomeL />} Right={<HomeR />} />
@@ -30,7 +32,6 @@ function App() {
         </>
       </OuterContainer>
       <Links />
-      <ThemeToggle dark={dark} toggle={toggleDark}/>
     </main>
   )
 }

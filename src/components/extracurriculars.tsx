@@ -7,8 +7,7 @@ export function ExtracurricularsL() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[75%] font-semibold pr-8 py-10 pl-8">
-            <h2 className="text-3xl font-extrabold mb-4">Extracurriculars & Leadership</h2>
+        <div className="max-w-[90%] w-[75%] font-semibold">
 
             <Card
                 title={<>Student Scholar |<HighlightRed>IUSE Scholar Academy Research Program</HighlightRed></>}
@@ -35,7 +34,6 @@ export function ExtracurricularsL() {
 
             <Card
                 title={<><HighlightRed>Presentations</HighlightRed></>}
-                date=""
                 isOpen={expanded === 2} isHidden={expanded !== null && expanded !== 2}
                 onClick={() => toggle(2)}
             >

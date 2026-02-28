@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
+import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
 
 
@@ -8,14 +8,11 @@ export function ExperienceL() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[75%] font-semibold pr-8 py-10 pl-8">
-            <h2 className="text-3xl font-extrabold mb-4">Experience</h2>
+        <div className="max-w-[90%] w-[75%] font-semibold">
 
-            <Card
-                title={<>Software Engineer & Founder |<HighlightBlue>Dami SaaS</HighlightBlue></>}
-                date="Feb. 2025 – Apr. 2025"
+            <Card title={<HighlightBlue size='text-3xl'>Software Engineer & Founder</HighlightBlue>}
+                caption={<Bold>Dami SaaS</Bold>} date="Feb. 2025 – Apr. 2025" onClick={() => toggle(0)}
                 isOpen={expanded === 0} isHidden={expanded !== null && expanded !== 0}
-                onClick={() => toggle(0)}
             >
                 <ul className="list-disc pl-5 mt-1 text-base">
                     <li>Utilized cloud compute serverless workers hosted on Cloudflare to develop a RESTful API and process Stripe webhooks</li>
@@ -26,9 +23,8 @@ export function ExperienceL() {
                 </ul>
             </Card>
 
-            <Card
-                title={<>Java Supplemental Instructor |<HighlightRed>Kean University CS/IT Department</HighlightRed></>}
-                date="Jan. 2025 – May 2025"
+            <Card title={<HighlightRed size='text-3xl'>Java Supplemental Instructor</HighlightRed>}
+                caption={<Bold>Kean University CS/IT Department</Bold>} date="Jan. 2025 – May 2025"
                 isOpen={expanded === 1} isHidden={expanded !== null && expanded !== 1}
                 onClick={() => toggle(1)}
             >
@@ -39,8 +35,8 @@ export function ExperienceL() {
             </Card>
 
             <Card
-                title={<>AI/ML Researcher |<HighlightBlue>Kean University</HighlightBlue></>}
-                date="May 2024 – Present"
+                title={<HighlightBlue size='text-3xl'>AI/ML Researcher</HighlightBlue>}
+                caption={<Bold>Kean University</Bold>} date="May 2024 – Present"
                 isOpen={expanded === 2} isHidden={expanded !== null && expanded !== 2}
                 onClick={() => toggle(2)}
             >
