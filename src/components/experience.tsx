@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
+import { LoadingImage } from '../utils/loading.tsx'
 
 
 export function ExperienceL() {
@@ -53,6 +54,6 @@ export function ExperienceL() {
 
 export function ExperienceR() {
     return (
-        <></>
+        <LoadingImage />
     )
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
+import { LoadingImage } from '../utils/loading.tsx'
 
 export function ExtracurricularsL() {
     const [expanded, setExpanded] = useState<number | null>(null)
@@ -62,6 +63,6 @@ export function ExtracurricularsL() {
 
 export function ExtracurricularsR() {
     return (
-        <></>
+        <LoadingImage />
     )
 }

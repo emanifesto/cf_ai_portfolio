@@ -1,8 +1,9 @@
 import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
+import { LoadingImage } from '../utils/loading.tsx'
 
 export function SkillsL() {
     return (
-        <></>
+        <LoadingImage />
     )
 }
 

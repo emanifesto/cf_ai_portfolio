@@ -2,13 +2,14 @@ import { useState } from 'react'
 import Bold, { HighlightRed, HighlightBlue } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
 import { Link } from './links.tsx'
+import { LoadingImage } from '../utils/loading.tsx'
 import Github from '../assets/svg/github2.svg'
 import Chrome from '../assets/svg/chrome.svg'
 import Website from '../assets/svg/website.svg'
 
 export function ProjectsL() {
     return (
-        <></>
+        <LoadingImage />
     )
 }
 
