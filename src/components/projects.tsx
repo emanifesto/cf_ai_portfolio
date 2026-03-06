@@ -18,7 +18,7 @@ export function ProjectsR() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[75%] font-semibold">
+        <div className="max-w-[90%] w-[90%] sm:w-[75%] font-semibold">
             <Card
                 title={<HighlightRed size="text-3xl">Adobe Stock Metadata Automation</HighlightRed>}
                 caption={<Bold>Published Chrome Extension</Bold>}
@@ -30,9 +30,9 @@ export function ProjectsR() {
                     <li>Automated upload workflow using HTML injection and the OpenAI API to assist Adobe Stock photo contributors</li>
                     <li>Stats: 30+ installs, 100+ impressions</li>
                     <div className='flex justify-around mt-5'>
-                        <Link url="https://github.com/emanifesto/Adobe-Extension" svg={Github} alt="a GitHub svg icon"/>
+                        <Link url="https://github.com/emanifesto/Adobe-Extension" svg={Github} alt="a GitHub svg icon" />
                         <Link url="https://chromewebstore.google.com/detail/adobe-stock-metadata-auto/fajbmjncoeajgpjbaeaibkeceecdfapj" svg={Chrome} alt="a Chrome svg icon" />
-                        <Link url="https://damisaas.com/asma" svg={Website} alt="a link svg icon" invert={true}/>
+                        <Link url="https://damisaas.com/asma" svg={Website} alt="a link svg icon" invert={true} />
                     </div>
                 </ul>
             </Card>
@@ -49,8 +49,8 @@ export function ProjectsR() {
                     <li>Using Google OAuth to separate user accounts and manage sessions</li>
                     <li>Leaderboard daily and weekly resets managed with backend cron jobs</li>
                     <div className='flex justify-around mt-5'>
-                        <Link url="https://github.com/emanifesto/hangman" svg={Github} alt="a GitHub svg icon"/>
-                        <Link url="https://hangman.emmanuelbabayemi37.workers.dev/" svg={Website} alt="a link svg icon" invert={true}/>
+                        <Link url="https://github.com/emanifesto/hangman" svg={Github} alt="a GitHub svg icon" />
+                        <Link url="https://hangman.emmanuelbabayemi37.workers.dev/" svg={Website} alt="a link svg icon" invert={true} />
                     </div>
                 </ul>
             </Card>

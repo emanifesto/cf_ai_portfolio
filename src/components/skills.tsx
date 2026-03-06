@@ -9,7 +9,7 @@ export function SkillsL() {
 
 export function SkillsR() {
     return (
-        <div className="max-w-[90%] w-[75%] font-semibold">
+        <div className="max-w-[90%] w-[90%] sm:w-[75%] font-semibold">
             <div className="mb-4">
                 <p className="font-extrabold"><HighlightBlue>Technical</HighlightBlue></p>
                 <p className="text-base mt-1">TypeScript/JavaScript, React, Tailwind, HTML, CSS, Python, PyTorch, Java</p>

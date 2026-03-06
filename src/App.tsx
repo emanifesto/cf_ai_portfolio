@@ -4,6 +4,7 @@ import OuterContainer, { InnerContainer } from './components/container.tsx'
 import Navigation from './components/nav.tsx'
 import Links from './components/links.tsx'
 import ThemeToggle from './components/toggle.tsx'
+import Chatbot from './components/chatbot.tsx'
 import { HomeL, HomeR } from './components/home.tsx'
 import { EducationL, EducationR } from './components/education.tsx'
 import { ExperienceL, ExperienceR } from './components/experience.tsx'
@@ -14,19 +15,19 @@ import ScrollBar from './utils/scroll.tsx'
 
 function App() {
   const [view, setView] = useState<string>('Home')
-  const [dark, setTheme ] = useState<boolean>(false)
+  const [dark, setTheme] = useState<boolean>(false)
   const toggleDark = () => setTheme(prev => !prev)
 
   useEffect(() => {
-    window.dispatchEvent(new WheelEvent('wheel', {'deltaY': 1}))
+    window.dispatchEvent(new WheelEvent('wheel', { 'deltaY': 1 }))
   }, [])
 
   return (
-    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xl transition-colors duration-500 dark:bg-darker-blue
+    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-base sm:text-xl transition-colors duration-500 dark:bg-darker-blue
        dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
-      <ScrollBar setView={setView}/>
+      <ScrollBar setView={setView} />
       <Navigation view={view}>
-        <ThemeToggle dark={dark} toggle={toggleDark}/>
+        <ThemeToggle dark={dark} toggle={toggleDark} />
       </Navigation>
       <OuterContainer>
         <>
@@ -39,6 +40,7 @@ function App() {
         </>
       </OuterContainer>
       <Links />
+      <Chatbot />
     </main>
   )
 }

@@ -9,7 +9,7 @@ export function ExperienceL() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[75%] font-semibold">
+        <div className="max-w-[90%] w-[90%] sm:w-[75%] font-semibold">
 
             <Card title={<HighlightBlue size='text-3xl'>Software Engineer & Founder</HighlightBlue>}
                 caption={<Bold>Dami SaaS</Bold>} date="Feb. 2025 – Apr. 2025" onClick={() => toggle(0)}
