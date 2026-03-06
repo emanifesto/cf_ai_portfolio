@@ -19,8 +19,8 @@ export function EducationL() {
 export function EducationR() {
     return (
         <div className="max-w-[90%] font-semibold py-10">
-            <HighlightBlue size='text-4xl sm:text-6xl'>AI</HighlightBlue><Bold size="text-2xl sm:text-4xl"> at Kean U'</Bold>
-            <ul className='list-disc mt-10 pl-8 text-lg sm:text-2xl'>
+            <HighlightBlue size='text-4xl lg:text-6xl'>AI</HighlightBlue><Bold size="text-2xl lg:text-4xl"> at Kean U'</Bold>
+            <ul className='list-disc mt-10 pl-8 text-lg lg:text-2xl'>
                 <li>3.55 GPA (4.0 Scale)</li>
                 <li><Bold>Cybersecurity</Bold> and <Bold>Music</Bold> minors</li>
                 <li>Object-Oriented Programming</li>

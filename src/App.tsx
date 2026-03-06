@@ -23,7 +23,7 @@ function App() {
   }, [])
 
   return (
-    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-base sm:text-xl transition-colors duration-500 dark:bg-darker-blue
+    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xs sm:text-base lg:text-xl transition-colors duration-500 dark:bg-darker-blue
        dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
       <ScrollBar setView={setView} />
       <Navigation view={view}>

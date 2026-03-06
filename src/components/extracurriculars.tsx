@@ -8,7 +8,7 @@ export function ExtracurricularsL() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[90%] sm:w-[75%] font-semibold">
+        <div className="max-w-[90%] w-[90%] lg:w-[75%] -mt-10 font-semibold">
 
             <Card
                 title={<Bold>Student Scholar</Bold>}

@@ -18,9 +18,9 @@ export function ProjectsR() {
     const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
 
     return (
-        <div className="max-w-[90%] w-[90%] sm:w-[75%] font-semibold">
+        <div className="max-w-[90%] w-[90%] lg:w-[75%] {-mb-18} font-semibold">
             <Card
-                title={<HighlightRed size="text-3xl">Adobe Stock Metadata Automation</HighlightRed>}
+                title={<HighlightRed size="text-xl sm:text-3xl">Adobe Stock Metadata Automation</HighlightRed>}
                 caption={<Bold>Published Chrome Extension</Bold>}
                 date="Feb. 2025 – Apr. 2025"
                 isOpen={expanded === 0} isHidden={expanded !== null && expanded !== 0}
@@ -38,7 +38,7 @@ export function ProjectsR() {
             </Card>
 
             <Card
-                title={<HighlightBlue size="text-3xl">Hangman</HighlightBlue>}
+                title={<HighlightBlue size="text-xl sm:text-3xl">Hangman</HighlightBlue>}
                 caption={<Bold>Work in progress!!!</Bold>}
                 date="Jan. 2026 – Present"
                 isOpen={expanded === 1} isHidden={expanded !== null && expanded !== 1}
