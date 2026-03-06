@@ -18,7 +18,6 @@ export function ScrollAnimation(event: {deltaY: number}, setView: Function){
 
     const container = document.getElementById('outer-container')
     const scrollDistance = container?.getBoundingClientRect().top
-    console.log(scrollDistance)
     const direction = event.deltaY < 0 ? 'up' : 'down'
     const screen = window.innerHeight
     let mapping = ['Home', 'Education', 'Experience', 'Projects', 'Extracurriculars', 'Skills']
