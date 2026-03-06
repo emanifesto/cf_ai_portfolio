@@ -14,7 +14,7 @@ export default function ScrollBar({setView}: {setView: Function}){
 }
 
 
-export function ScrollAnimation(event: {deltaY: number}, setView: Function, id?: string, oldView?: string){
+export function ScrollAnimation(event: {deltaY: number}, setView: Function){
 
     const container = document.getElementById('outer-container')
     const scrollDistance = container?.getBoundingClientRect().top
@@ -23,7 +23,7 @@ export function ScrollAnimation(event: {deltaY: number}, setView: Function, id?:
     const screen = window.innerHeight
     let mapping = ['Home', 'Education', 'Experience', 'Projects', 'Extracurriculars', 'Skills']
 
-    id = "Home"
+    let id = "Home"
     if (scrollDistance !== undefined){
         const location = Math.floor(scrollDistance * -1 / screen)
         id = mapping[location]
