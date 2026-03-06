@@ -27,11 +27,11 @@ export default function Chatbot() {
         try {
             const res = await fetch('/api/question', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ question }),
+                headers: { 'Content-Type': 'text/plain' },
+                body: question,
             })
             const data = await res.json()
-            const answer = data?.response ?? data?.result ?? 'Sorry, I could not generate a response.'
+            const answer = data?.response
             setMessages(prev => [...prev, { role: 'assistant', content: answer }])
         } catch {
             setMessages(prev => [...prev, { role: 'assistant', content: 'Something went wrong. Please try again.' }])
