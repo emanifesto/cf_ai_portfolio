@@ -10,20 +10,22 @@ import { ExperienceL, ExperienceR } from './components/experience.tsx'
 import { ProjectsL, ProjectsR } from './components/projects.tsx'
 import { ExtracurricularsL, ExtracurricularsR } from './components/extracurriculars.tsx'
 import { SkillsL, SkillsR } from './components/skills.tsx'
-import ScrollBar, { ScrollAnimation } from './utils/scroll.tsx'
+import ScrollBar from './utils/scroll.tsx'
 
 function App() {
-  const [dark, setTheme ] = useState<boolean>(false)
   const [view, setView] = useState<string>('Home')
-  
-  // const toggleView = (s: string) => setView(s)
+  const [dark, setTheme ] = useState<boolean>(false)
   const toggleDark = () => setTheme(prev => !prev)
+
+  useEffect(() => {
+    window.dispatchEvent(new WheelEvent('wheel', {'deltaY': 1}))
+  }, [])
 
   return (
     <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xl transition-colors duration-500 dark:bg-darker-blue
        dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
       <ScrollBar setView={setView}/>
-      <Navigation view={view} setView={setView}>
+      <Navigation view={view}>
         <ThemeToggle dark={dark} toggle={toggleDark}/>
       </Navigation>
       <OuterContainer>
