@@ -12,7 +12,7 @@ export function EducationL() {
     const image = images[rng]
 
     return (
-        <LoadingImage />
+        <LoadingImage image={image}/>
     )
 }
 
