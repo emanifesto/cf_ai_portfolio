@@ -4,10 +4,11 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/founder/home',
+  root: "./src",
+  base: '/founder',
   build: {
-    outDir : './home',
-    emptyOutDir: true
+    outDir : '../',
+    emptyOutDir: false
   },
   plugins: [
     react({
