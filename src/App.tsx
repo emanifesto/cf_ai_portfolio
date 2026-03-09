@@ -23,20 +23,19 @@ function App() {
   }, [])
 
   return (
-    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xs sm:text-base lg:text-xl transition-colors duration-500 dark:bg-darker-blue
-       dark:text-white bg-off-white text-black ${dark && 'dark'}`}>
+    <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xs sm:text-base lg:text-xl transition-colors duration-500 dark:bg-darker-blue dark:text-white bg-off-white text-black ${dark && 'dark'} tracking-wide`}>
       <ScrollBar setView={setView} />
       <Navigation view={view}>
         <ThemeToggle dark={dark} toggle={toggleDark} />
       </Navigation>
       <OuterContainer>
         <>
-          <InnerContainer id="Home" Left={<HomeL />} Right={<HomeR />} />
-          <InnerContainer id="Education" Left={<EducationL />} Right={<EducationR />} />
-          <InnerContainer id="Experience" Left={<ExperienceL />} Right={<ExperienceR />} />
-          <InnerContainer id="Projects" Left={<ProjectsL />} Right={<ProjectsR />} />
-          <InnerContainer id="Extracurriculars" Left={<ExtracurricularsL />} Right={<ExtracurricularsR />} />
-          <InnerContainer id="Skills" Left={<SkillsL />} Right={<SkillsR />} />
+          <InnerContainer id="Home" view={view} Left={<HomeL />} Right={<HomeR />} />
+          <InnerContainer id="Education" view={view} Left={<EducationL />} Right={<EducationR />} />
+          <InnerContainer id="Experience" view={view} Left={<ExperienceL />} Right={<ExperienceR />} />
+          <InnerContainer id="Projects" view={view} Left={<ProjectsL />} Right={<ProjectsR />} />
+          <InnerContainer id="Extracurriculars" view={view} Left={<ExtracurricularsL />} Right={<ExtracurricularsR />} />
+          <InnerContainer id="Skills" view={view} Left={<SkillsL />} Right={<SkillsR />} />
         </>
       </OuterContainer>
       <Links />

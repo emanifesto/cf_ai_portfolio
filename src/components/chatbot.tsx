@@ -47,11 +47,7 @@ export default function Chatbot() {
                 id="chatbot-toggle"
                 onClick={() => setOpen(prev => !prev)}
                 aria-label="Open chatbot"
-                className={`fixed z-50 bottom-6 right-6 size-14 rounded-full cursor-pointer
-                    flex items-center justify-center shadow-lg
-                    bg-gradient-to-br from-[#3b71ff] to-[#1da5ff]
-                    hover:scale-110 active:scale-95 transition-all duration-200
-                    ${!open ? 'animate-[pulse_3s_ease-in-out_infinite]' : ''}`}
+                className={`fixed z-1 bottom-6 right-6 size-14 rounded-full cursor-pointer flex items-center justify-center shadow-lg bg-linear-to-br from-[#3b71ff] to-[#1da5ff] hover:scale-110 active:scale-95 transition-all duration-200 ${!open ? 'animate-[pulse_3s_ease-in-out_infinite]' : ''}`}
             >
                 {open ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={2}>
@@ -65,23 +61,15 @@ export default function Chatbot() {
             </button>
 
             {/* Chat panel */}
-            <div className={`fixed z-50 bottom-24 right-6 w-[calc(100vw-3rem)] sm:w-[22rem] max-h-[32rem] rounded-2xl
-                flex flex-col overflow-hidden
-                border-2 transition-all duration-300 origin-bottom-right
-                dark:bg-black/60 dark:border-dark-blue dark:backdrop-blur-xl
-                bg-white/80 border-gray-300 backdrop-blur-xl
-                shadow-2xl
-                ${open ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}
-            >
+            <div className={`fixed z-1 bottom-24 right-6 w-[calc(100vw-3rem)] sm:w-88 max-h-128 rounded-2xl flex flex-col overflow-hidden border-2 transition-all duration-300 origin-bottom-right dark:bg-black/60 dark:border-dark-blue dark:backdrop-blur-xl bg-white/80 border-gray-300 backdrop-blur-xl shadow-2xl ${open ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}>
                 {/* Header */}
-                <div className="px-4 py-3 border-b dark:border-dark-blue border-gray-300
-                    bg-gradient-to-r from-[#3b71ff] to-[#1da5ff] text-white">
-                    <p className="font-bold text-base tracking-wide">Chat with Emmanuel's AI</p>
+                <div className="px-4 py-3 border-b dark:border-dark-blue border-gray-300 bg-linear-to-r from-[#3b71ff] to-[#1da5ff] text-white">
+                    <p className="font-bold text-base">Chat with Emmanuel's AI</p>
                     <p className="text-xs opacity-80">Powered by RAG &middot; Ask anything about me</p>
                 </div>
 
                 {/* Messages area */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[14rem] no-scrollbar">
+                <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-56 no-scrollbar">
                     {messages.length === 0 && (
                         <div className="flex items-center justify-center h-full">
                             <p className="text-sm dark:text-gray-500 text-gray-400 italic">
@@ -94,7 +82,7 @@ export default function Chatbot() {
                         <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                             <div className={`max-w-[80%] px-3 py-2 rounded-2xl text-sm leading-relaxed
                                 ${msg.role === 'user'
-                                    ? 'bg-gradient-to-br from-[#3b71ff] to-[#1da5ff] text-white rounded-br-sm'
+                                    ? 'bg-linear-to-br from-[#3b71ff] to-[#1da5ff] text-white rounded-br-sm'
                                     : 'dark:bg-white/10 bg-gray-200/80 dark:text-gray-200 text-gray-800 rounded-bl-sm'
                                 }`}
                             >
@@ -106,9 +94,9 @@ export default function Chatbot() {
                     {loading && (
                         <div className="flex justify-start">
                             <div className="dark:bg-white/10 bg-gray-200/80 px-4 py-2 rounded-2xl rounded-bl-sm flex gap-1 items-center">
-                                <span className="size-2 rounded-full bg-gradient-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:0ms]" />
-                                <span className="size-2 rounded-full bg-gradient-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:150ms]" />
-                                <span className="size-2 rounded-full bg-gradient-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:300ms]" />
+                                <span className="size-2 rounded-full bg-linear-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:0ms]" />
+                                <span className="size-2 rounded-full bg-linear-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:150ms]" />
+                                <span className="size-2 rounded-full bg-linear-to-br from-[#3b71ff] to-[#1da5ff] animate-bounce [animation-delay:300ms]" />
                             </div>
                         </div>
                     )}
@@ -128,10 +116,7 @@ export default function Chatbot() {
                         onChange={e => setInput(e.target.value)}
                         placeholder="Ask me interview questions"
                         disabled={loading}
-                        className="flex-1 px-3 py-2 rounded-xl text-sm outline-none
-                            dark:bg-white/10 dark:text-white dark:placeholder-gray-500
-                            bg-gray-100 text-gray-900 placeholder-gray-400
-                            focus:ring-2 focus:ring-[#3b71ff]/50 transition-all"
+                        className="flex-1 px-3 py-2 rounded-xl text-sm outline-none dark:bg-white/10 dark:text-white dark:placeholder-gray-500 bg-gray-100 text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-[#3b71ff]/50 transition-all"
                     />
                     <button
                         id="chatbot-send"
@@ -139,7 +124,7 @@ export default function Chatbot() {
                         disabled={loading || !input.trim()}
                         aria-label="Send message"
                         className="size-9 rounded-xl flex items-center justify-center cursor-pointer
-                            bg-gradient-to-br from-[#3b71ff] to-[#1da5ff]
+                            bg-linear-to-br from-[#3b71ff] to-[#1da5ff]
                             hover:scale-105 active:scale-95 transition-all
                             disabled:opacity-40 disabled:cursor-not-allowed"
                     >

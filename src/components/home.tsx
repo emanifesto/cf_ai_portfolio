@@ -3,7 +3,7 @@ import Headshot from '../assets/photo/headshot.jpg'
 
 export function HomeL() {
     return (
-        <div className="tracking-wide text-center max-w-[90%] font-semibold px-4">
+        <div className="text-center max-w-[90%] font-semibold px-4">
             <p>Hello, I'm </p>
             <HighlightRed size="text-4xl lg:text-6xl">Emmanuel Babayemi</HighlightRed>
             <p className="dark:text-gray-400 text-gray-700 mt-5 w-[90%] mx-auto">

@@ -34,7 +34,7 @@ export default function Card({ title, caption, date, children, isOpen, isHidden,
     if (isHidden) return null
 
     return (
-        <div className={`border-3 dark:border-white/20 border-black/20 rounded-lg mb-3 transition-all duration-300`}>
+        <div className={`max-w-175 mx-auto border-3 dark:border-white/20 border-black/20 rounded-lg mb-3 transition-all duration-300`}>
             <button onClick={onClick}
                 className={`w-full text-left px-5 py-2 cursor-pointer flex items-center justify-between gap-4 dark:hover:bg-white/5 hover:bg-black/5 transition-colors duration-200`}>
                 <div>
@@ -45,9 +45,11 @@ export default function Card({ title, caption, date, children, isOpen, isHidden,
                 <ExpandIcon isOpen={isOpen} />
             </button>
             { isOpen && 
-                <div className="px-5 py-3 bg-black/10 ">
-                    {children}
-               </div>
+                <button onClick={onClick} className="px-2 sm:px-5 py-1 sm:py-3 bg-black/10 text-left w-full">
+                    <ul className="list-disc pl-5 text-xs sm:text-sm">
+                        {children}
+                    </ul>
+               </button>
             } 
         </div>
     )

@@ -17,7 +17,7 @@ export default function Links() {
 
 export function Link({ url, svg, alt, invert = false }: { url: string, svg: string, alt: string, invert?: boolean }) {
     return (
-        <a href={url} target='/blank' className='flex items-end animate-[pulse_4s_infinite]'>
+        <a href={url} target='/blank' className='flex items-end animate-[pulse_3s_ease-in-out_infinite]'>
             <img src={svg} alt={alt} className={`size-8 lg:size-12 transition-all duration-300 ${invert && 'dark:invert'} inline`}></img>
         </a>
     )

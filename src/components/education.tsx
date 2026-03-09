@@ -20,13 +20,13 @@ export function EducationR() {
     return (
         <div className="max-w-[90%] font-semibold py-10">
             <HighlightBlue size='text-4xl lg:text-6xl'>AI</HighlightBlue><Bold size="text-2xl lg:text-4xl"> at Kean U'</Bold>
-            <ul className='list-disc mt-10 pl-8 text-lg lg:text-2xl'>
+            <ul className='list-disc mt-10 pl-8 text-lg lg:text-xl'>
                 <li>3.55 GPA (4.0 Scale)</li>
                 <li><Bold>Cybersecurity</Bold> and <Bold>Music</Bold> minors</li>
                 <li>Object-Oriented Programming</li>
                 <li>Data Structures & Algorithms</li>
-                <li><HighlightRed>Software Development</HighlightRed></li>
-                <li><HighlightRed>Deep Learning</HighlightRed></li>
+                <li><HighlightRed size='text-lg lg:text-xl'>Software Development</HighlightRed></li>
+                <li><HighlightRed size='text-lg lg:text-xl'>Deep Learning</HighlightRed></li>
             </ul>
         </div>
     )
