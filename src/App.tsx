@@ -1,5 +1,5 @@
 import './App.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import OuterContainer, { InnerContainer } from './components/container.tsx'
 import Navigation from './components/nav.tsx'
 import Links from './components/links.tsx'
@@ -14,18 +14,15 @@ import { SkillsL, SkillsR } from './components/skills.tsx'
 import ScrollBar from './utils/scroll.tsx'
 
 function App() {
+  const locationRef = useRef<number>(0)
   const [view, setView] = useState<string>('Home')
   const [dark, setTheme] = useState<boolean>(false)
   const toggleDark = () => setTheme(prev => !prev)
 
-  useEffect(() => {
-    window.dispatchEvent(new WheelEvent('wheel', { 'deltaY': 1 }))
-  }, [])
-
   return (
     <main id="main" className={`h-screen overflow-scroll no-scrollbar text-xs sm:text-base lg:text-xl transition-colors duration-500 dark:bg-darker-blue dark:text-white bg-off-white text-black ${dark && 'dark'} tracking-wide`}>
-      <ScrollBar setView={setView} />
-      <Navigation view={view}>
+      <ScrollBar setView={setView} locationRef={locationRef}/>
+      <Navigation view={view} setView={setView} locationRef={locationRef}>
         <ThemeToggle dark={dark} toggle={toggleDark} />
       </Navigation>
       <OuterContainer>
