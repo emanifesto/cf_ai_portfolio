@@ -11,7 +11,7 @@ import { ExperienceL, ExperienceR } from './components/experience.tsx'
 import { ProjectsL, ProjectsR } from './components/projects.tsx'
 import { ExtracurricularsL, ExtracurricularsR } from './components/extracurriculars.tsx'
 import { SkillsL, SkillsR } from './components/skills.tsx'
-import ScrollBar from './utils/scroll.tsx'
+import ScrollBar from './components/scroll.tsx'
 
 function App() {
   const locationRef = useRef<number>(0)

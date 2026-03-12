@@ -23,7 +23,7 @@ export function HighlightBlue({ children, size }: Props) {
 
 export function HighlightRed({ children, size }: Props) {
     return (
-        <span className={`${size ? size : 'text-base/4 sm:text-lg/5 lg:text-xl'} font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#ff3b71] to-[#ff1da5]`}>
+        <span className={`${size ? size : 'text-base/4 sm:text-lg/5 lg:text-xl'} font-extrabold text-transparent bg-clip-text bg-linear-to-l from-[#ff1da5] to-[#ff3b71]`}>
             {' ' + children + ' '}
         </span>
     )
