@@ -45,6 +45,7 @@ export default function Navigation({ children, view, setView, locationRef }: { v
                             setOpen(false)
                             locationRef.current = (screenSize * idx) + 100
                             setView(title)
+                            setTimeout(() => window.dispatchEvent(new WheelEvent('wheel', { 'deltaY': 1 })), 0)
                         }}
                             className={`text-lg transition-all duration-150
                             ${view === title
@@ -67,6 +68,7 @@ function Section({ title, view, setView, relative, locationRef }: { title: strin
         <a href={`#${title}`} onClick={async () => {
             locationRef.current = relative
             setView(title)
+            setTimeout(() => window.dispatchEvent(new WheelEvent('wheel', { 'deltaY': 1 })), 0)
         }}
             className={`text-2xl ${textColor} dark:hover:text-gray-200 hover:text-gray-900 transition-all duration-150`}>
             <p>{title}</p>
