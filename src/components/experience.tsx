@@ -47,24 +47,26 @@ export function ExperienceL() {
 }
 
 export function ExperienceR() {
-    let AI_Image
+    const [imageURL, setImageURL] = useState<string>('')
 
     useEffect(() => {
         const generateImage = async () => {
-            AI_Image = await fetch('/founder/api/generate', {
+            const response = await fetch('/founder/api/generate', {
                 method: 'GET'
             })
+            const blob = await response.blob()
+            const imageURL = URL.createObjectURL(blob)
+            setImageURL(imageURL)
         }
         generateImage()
     }, [])
 
     return (
         <>
-            {AI_Image
-                ? <MediaContainer image={AI_Image} />
+            {imageURL
+                ? <MediaContainer image={imageURL} />
                 : <MediaContainer text='Generating image...' />
             }
         </>
-        
     )
 }
