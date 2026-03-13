@@ -15,6 +15,7 @@
     --animate-appear: appear 1s;
     --animate-disappear: disappear 1s;
     --animate-type: type 3s steps(15) infinite, caret 1s infinite;
+    --animate-scroll: scroll 15s infinite linear;
 
     @keyframes appear{
         0%{
@@ -53,6 +54,15 @@
             border-color: transparent;
         }
     }
+
+    @keyframes scroll{
+        from{
+            transform: translateX(110%)
+        }
+        to{
+            transform: translateX(-410%)
+        }
+    }
 }
 
 @layer utilities {
@@ -64,5 +74,9 @@
     .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+
+    .paused:hover{
+        animation-play-state: paused;
     }
 }

@@ -48,6 +48,6 @@ export function ExperienceL() {
 
 export function ExperienceR() {
     return (
-        <MediaContainer />
+        <MediaContainer text='Generating image...' />
     )
 }

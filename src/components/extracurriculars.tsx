@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
-import { MediaContainer } from '../utils/media.tsx'
+import { MediaSlider } from '../utils/media.tsx'
+import AwardCertificate from '../assets/extracurriculars/Award Cert.jfif'
+import GMIS from '../assets/extracurriculars/GMIS.jfif'
+import NCUR from '../assets/extracurriculars/NCUR.jpg'
+import Piano from '../assets/extracurriculars/PreludeInCmajor.mp4'
 
 export function ExtracurricularsL() {
     const [expanded, setExpanded] = useState<number | null>(null)
@@ -55,6 +59,6 @@ export function ExtracurricularsL() {
 
 export function ExtracurricularsR() {
     return (
-        <MediaContainer />
+        <MediaSlider media={[NCUR, GMIS, AwardCertificate, Piano]} />
     )
 }

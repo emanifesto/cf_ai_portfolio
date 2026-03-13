@@ -6,16 +6,23 @@ import { MediaContainer } from '../utils/media.tsx'
 import Github from '../assets/svg/github2.svg'
 import Chrome from '../assets/svg/chrome.svg'
 import Website from '../assets/svg/website.svg'
+import ASMADemo from '../assets/projects/ASMA demo.mp4'
+import HangmanDemo from '../assets/projects/Hangman Demo.mp4'
 
-export function ProjectsL() {
+export function ProjectsL({expandedProject}: {expandedProject: number | null}) {
     return (
-        <MediaContainer />
+        <>
+            {expandedProject === null && <MediaContainer  text="Click on a project"/>}
+            {expandedProject === 0 && <MediaContainer video={ASMADemo} autoplay={true}/>}
+            {expandedProject === 1 && <MediaContainer video={HangmanDemo} autoplay={true}/>}
+        </>
     )
 }
 
-export function ProjectsR() {
-    const [expanded, setExpanded] = useState<number | null>(null)
-    const toggle = (i: number) => setExpanded(prev => prev === i ? null : i)
+export function ProjectsR({expandedProject, setExpandedProject}: {expandedProject: number | null, setExpandedProject: React.Dispatch<React.SetStateAction<number | null>>}) {
+    const toggle = (i: number) => {
+        setExpandedProject(prev => prev === i ? null : i)
+    }
 
     return (
         <div className="max-w-[90%] w-[90%] lg:w-[75%] {-mb-18} font-semibold">
@@ -23,7 +30,7 @@ export function ProjectsR() {
                 title={<HighlightRed size="text-xl sm:text-3xl">Adobe Stock Metadata Automation</HighlightRed>}
                 caption={<Bold>Published Chrome Extension</Bold>}
                 date="Feb. 2025 – Apr. 2025"
-                isOpen={expanded === 0} isHidden={expanded !== null && expanded !== 0}
+                isOpen={expandedProject === 0} isHidden={expandedProject !== null && expandedProject !== 0}
                 onClick={() => toggle(0)}
             >
                 <li>Automated upload workflow using HTML injection and the OpenAI API to assist Adobe Stock photo contributors</li>
@@ -39,7 +46,7 @@ export function ProjectsR() {
                 title={<HighlightBlue size="text-xl sm:text-3xl">Hangman</HighlightBlue>}
                 caption={<Bold>Work in progress!!!</Bold>}
                 date="Jan. 2026 – Present"
-                isOpen={expanded === 1} isHidden={expanded !== null && expanded !== 1}
+                isOpen={expandedProject === 1} isHidden={expandedProject !== null && expandedProject !== 1}
                 onClick={() => toggle(1)}
             >
                 <li>Creating a hangman game with competitive aspect of global leaderboard</li>

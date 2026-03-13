@@ -17,6 +17,7 @@ function App() {
   const locationRef = useRef<number>(0)
   const [view, setView] = useState<string>('Home')
   const [dark, setTheme] = useState<boolean>(false)
+  const [expandedProject, setExpandedProject] = useState<number | null>(null)
   const toggleDark = () => setTheme(prev => !prev)
 
   return (
@@ -30,7 +31,7 @@ function App() {
           <InnerContainer id="Home" view={view} Left={<HomeL />} Right={<HomeR />} />
           <InnerContainer id="Education" view={view} Left={<EducationL />} Right={<EducationR />} />
           <InnerContainer id="Experience" view={view} Left={<ExperienceL />} Right={<ExperienceR />} />
-          <InnerContainer id="Projects" view={view} Left={<ProjectsL />} Right={<ProjectsR />} />
+          <InnerContainer id="Projects" view={view} Left={<ProjectsL expandedProject={expandedProject} />} Right={<ProjectsR expandedProject={expandedProject} setExpandedProject={setExpandedProject}/>} />
           <InnerContainer id="Extracurriculars" view={view} Left={<ExtracurricularsL />} Right={<ExtracurricularsR />} />
           <InnerContainer id="Skills" view={view} Left={<SkillsL />} Right={<SkillsR />} />
         </>

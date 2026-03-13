@@ -12,7 +12,7 @@ export function EducationL() {
     const image = images[rng]
 
     return (
-        <MediaContainer image={image}/>
+        <MediaContainer image={image} text="Generating image..."/>
     )
 }
 
