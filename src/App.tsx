@@ -1,5 +1,5 @@
 import './App.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import OuterContainer, { InnerContainer } from './components/container.tsx'
 import Navigation from './components/nav.tsx'
 import Links from './components/links.tsx'

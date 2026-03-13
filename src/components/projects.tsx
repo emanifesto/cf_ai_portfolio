@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Bold, { HighlightRed, HighlightBlue } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
 import { Link } from './links.tsx'

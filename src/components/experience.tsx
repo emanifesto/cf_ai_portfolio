@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import Card from '../utils/card.tsx'
 import { MediaContainer } from '../utils/media.tsx'
@@ -47,7 +47,22 @@ export function ExperienceL() {
 }
 
 export function ExperienceR() {
+    // let AI_Image
+    let genCount = 0
+
+    useEffect(() => {
+        console.log(genCount, "generation")
+        genCount += 1
+        // const generateImage = async () => {
+        //     AI_Image = await fetch('/founder/api/generate', {
+        //         method: 'GET'
+        //     })
+        // }
+        // generateImage()
+    }, [])
+
     return (
+
         <MediaContainer text='Generating image...' />
     )
 }
