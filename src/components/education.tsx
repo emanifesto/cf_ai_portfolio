@@ -3,7 +3,7 @@ import Hynes from '../assets/kean/Hynes.jpg'
 import NAAB from '../assets/kean/NAAB.webp'
 import MSC from '../assets/kean/MSC.jpg'
 import STEM from '../assets/kean/STEM.jpg'
-import { LoadingImage } from '../utils/loading.tsx'
+import { MediaContainer } from '../utils/media.tsx'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 
 export function EducationL() {
@@ -12,7 +12,7 @@ export function EducationL() {
     const image = images[rng]
 
     return (
-        <LoadingImage image={image}/>
+        <MediaContainer image={image}/>
     )
 }
 
