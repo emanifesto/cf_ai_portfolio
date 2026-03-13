@@ -7,9 +7,9 @@ import { MediaContainer } from '../utils/media.tsx'
 import Bold, { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 
 export function EducationL() {
-    const rng = Math.floor(Math.random() * 5)
     const images = [GLAB, Hynes, NAAB, MSC, STEM]
-    const image = images[rng]
+    const idx = Math.floor(Math.random() * images.length)
+    const image = images[idx]
 
     return (
         <MediaContainer image={image} text="Generating image..."/>

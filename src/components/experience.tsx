@@ -47,22 +47,24 @@ export function ExperienceL() {
 }
 
 export function ExperienceR() {
-    // let AI_Image
-    let genCount = 0
+    let AI_Image
 
     useEffect(() => {
-        console.log(genCount, "generation")
-        genCount += 1
-        // const generateImage = async () => {
-        //     AI_Image = await fetch('/founder/api/generate', {
-        //         method: 'GET'
-        //     })
-        // }
-        // generateImage()
+        const generateImage = async () => {
+            AI_Image = await fetch('/founder/api/generate', {
+                method: 'GET'
+            })
+        }
+        generateImage()
     }, [])
 
     return (
-
-        <MediaContainer text='Generating image...' />
+        <>
+            {AI_Image
+                ? <MediaContainer image={AI_Image} />
+                : <MediaContainer text='Generating image...' />
+            }
+        </>
+        
     )
 }
