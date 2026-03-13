@@ -54,9 +54,12 @@ export function ExperienceR() {
             const response = await fetch('/founder/api/generate', {
                 method: 'GET'
             })
-            const blob = await response.blob()
-            const imageURL = URL.createObjectURL(blob)
-            setImageURL(imageURL)
+            console.log(response)
+            console.log(await  response.json())
+            console.log(await response.blob())
+            // const blob = await response.blob()
+            // const imageURL = URL.createObjectURL(blob)
+            setImageURL('')
         }
         generateImage()
     }, [])
