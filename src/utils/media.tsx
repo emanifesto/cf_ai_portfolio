@@ -22,7 +22,7 @@ export function MediaContainer( {image, video, autoplay, text}: {image?: string,
 export function MediaSlider({media}: {media: string[]}){
     return(
         <div className="rounded-xl relative overflow-hidden aspect-video max-h-[90%] max-w-[90%] h-[65%] lg:h-fit lg:w-[80%] bg-black place-items-center content-center">
-            <div className="paused animate-scroll no-scrollbar flex gap-3 aspect-video h-[95%] place-items-center content-center">
+            <div className="paused animate-slider no-scrollbar flex gap-3 aspect-video h-[95%] place-items-center content-center">
                 <img src={media[0]} />
                 <img src={media[1]} />
                 <img src={media[2]} />

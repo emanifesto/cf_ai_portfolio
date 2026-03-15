@@ -15,7 +15,7 @@
     --animate-appear: appear 1s;
     --animate-disappear: disappear 1s;
     --animate-type: type 3s steps(15) infinite, caret 1s infinite;
-    --animate-scroll: scroll 15s infinite linear;
+    --animate-slider: slider 20s infinite linear;
 
     @keyframes appear{
         0%{
@@ -55,7 +55,7 @@
         }
     }
 
-    @keyframes scroll{
+    @keyframes slider{
         from{
             transform: translateX(110%)
         }
