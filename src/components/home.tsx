@@ -1,5 +1,5 @@
 import { HighlightRed, HighlightBlue } from "../utils/highlight.tsx"
-import Headshot from '../assets/photo/headshot.jpg'
+import Headshot from '../assets/photo/Headshot.jpg'
 
 export function HomeL() {
     return (

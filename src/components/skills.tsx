@@ -1,9 +1,10 @@
 import { HighlightBlue, HighlightRed } from '../utils/highlight.tsx'
 import { MediaContainer } from '../utils/media.tsx'
+import Skills from '../assets/svg/skills.svg'
 
 export function SkillsL() {
     return (
-        <MediaContainer />
+        <MediaContainer image={Skills} />
     )
 }
 
