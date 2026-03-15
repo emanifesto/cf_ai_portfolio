@@ -7,7 +7,7 @@ export default function Navigation({ children, view, setView, locationRef }: { v
     return (
         <>
             {/* Desktop nav — hidden on mobile */}
-            <div className={`hidden lg:flex gap-7 items-center rounded-full drop-shadow-xs px-5 pb-3 pt-2 fixed z-10 top-4 left-[50%] translate-x-[-50%] border-3 transition-colors duration-500 dark:bg-black/50 dark:border-dark-blue bg-gray-400/30 border-gray-400`}>
+            <div className={`hidden lg:flex gap-7 items-center rounded-full drop-shadow-xs px-5 pb-3 pt-2 fixed z-1 top-4 left-[50%] translate-x-[-50%] border-3 transition-colors duration-500 dark:bg-black/50 dark:border-dark-blue bg-gray-400/30 border-gray-400`}>
                 <Section title="Home" view={view} setView={setView} relative={(screenSize * 0) + 100} locationRef={locationRef} />
                 <Section title="Education" view={view} setView={setView} relative={(screenSize * 1) + 100} locationRef={locationRef} />
                 <Section title="Experience" view={view} setView={setView} relative={(screenSize * 2) + 100} locationRef={locationRef} />
@@ -18,7 +18,7 @@ export default function Navigation({ children, view, setView, locationRef }: { v
             </div>
 
             {/* Mobile hamburger — visible on small screens only */}
-            <div className="lg:hidden fixed z-10 top-4 right-4 flex items-center gap-2">
+            <div className="lg:hidden fixed z-1 top-4 right-4 flex items-center gap-2">
                 {children}
                 <button
                     onClick={() => setOpen(prev => !prev)}
@@ -39,7 +39,7 @@ export default function Navigation({ children, view, setView, locationRef }: { v
 
             {/* Mobile dropdown menu */}
             {open && (
-                <div className="lg:hidden fixed z-9 top-18 right-4 flex flex-col gap-3 rounded-2xl px-5 py-4 border-3 transition-colors duration-500 dark:bg-black/70 dark:border-dark-blue bg-white/80 border-gray-400 backdrop-blur-xl shadow-lg">
+                <div className="lg:hidden fixed z-1 top-18 right-4 flex flex-col gap-3 rounded-2xl px-5 py-4 border-3 transition-colors duration-500 dark:bg-black/70 dark:border-dark-blue bg-white/80 border-gray-400 backdrop-blur-xl shadow-lg">
                     {['Home', 'Education', 'Experience', 'Projects', 'Extracurriculars', 'Skills'].map((title, idx) => (
                         <a key={title} href={`#${title}`} onClick={() => {
                             setOpen(false)

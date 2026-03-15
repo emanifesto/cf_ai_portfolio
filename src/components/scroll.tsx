@@ -4,10 +4,13 @@ export default function ScrollBar({setView, locationRef}: {setView: Function, lo
     const screenSize = window.innerHeight
     const maxScroll = (screenSize * 6) - 1
     let direction = "down"
-    // const scrollSize = "h-[" + locationRef / screenSize
 
     useEffect(() => {
-        window.addEventListener('wheel', (e) => {
+        window.addEventListener('wheel', (e: any) => {
+            if (e.target.id === 'chat' || e.target.parentNode.id === 'chat' || e.target.parentNode.parentNode.id === 'chat'){
+                return
+            }
+
             let location = locationRef.current
             
             if (e.deltaY !== 0) 
@@ -19,7 +22,7 @@ export default function ScrollBar({setView, locationRef}: {setView: Function, lo
 
             locationRef.current = location
             ScrollAnimation(setView, location, screenSize)
-        })
+        }, {passive:false})
     
         return () => window.removeEventListener('wheel', (e) => {
             let location = locationRef.current

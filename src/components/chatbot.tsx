@@ -61,7 +61,7 @@ export default function Chatbot() {
             </button>
 
             {/* Chat panel */}
-            <div className={`fixed z-1 bottom-24 right-6 w-[calc(100vw-3rem)] sm:w-88 max-h-128 rounded-2xl flex flex-col overflow-hidden border-2 transition-all duration-300 origin-bottom-right dark:bg-black/60 dark:border-dark-blue dark:backdrop-blur-xl bg-white/80 border-gray-300 backdrop-blur-xl shadow-2xl ${open ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}>
+            <div className={`fixed z-10 bottom-24 right-6 w-[calc(100vw-3rem)] sm:w-100 max-h-112 rounded-2xl flex flex-col overflow-hidden border-2 transition-all duration-300 origin-bottom-right dark:bg-black/60 dark:border-dark-blue dark:backdrop-blur-xl bg-white/80 border-gray-300 backdrop-blur-xl shadow-2xl ${open ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}>
                 {/* Header */}
                 <div className="px-4 py-3 border-b dark:border-dark-blue border-gray-300 bg-linear-to-r dark:from-[#3b71ff] dark:to-[#1da5ff] from-[#ff1da5] to-[#ff3b71] text-white">
                     <p className="font-bold text-base">Chat with Emmanuel's AI</p>
@@ -69,7 +69,7 @@ export default function Chatbot() {
                 </div>
 
                 {/* Messages area */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-56 no-scrollbar">
+                <div id='chat' className="flex-1 overflow-y-auto p-4 space-y-3 min-h-56">
                     {messages.length === 0 && (
                         <div className="flex items-center justify-center h-full">
                             <p className="text-sm dark:text-gray-500 text-gray-400 italic">
