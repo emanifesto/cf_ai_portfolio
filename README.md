@@ -1,7 +1,7 @@
 Skip the fluff and see for yourself - [Portfolio](https://damisaas.com/founder) :point_left:
 
 
-# *Features* Rundown :bullseye:
+# *Features* Rundown 🎯
 
 - Retrieval Augmented Generation
 - Dynamic Image Generation
