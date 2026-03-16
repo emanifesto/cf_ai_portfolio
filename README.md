@@ -1,7 +1,7 @@
 Skip the fluff and see for yourself - [Portfolio](https://damisaas.com/founder) :point_left:
 
 
-# *Features* Rundown :soarkles:
+# *Features* Rundown :target:
 
 - Retrieval Augmented Generation
 - Dynamic Image Generation
@@ -38,7 +38,7 @@ Image Generation Model- '@cf/black-forest-labs/flux-2-klein-4b'
 
 ## Seamless Scroll :ok_hand:
 
-I was inspired by a [video](https://www.youtube.com/watch?v=4yBxb5RQxPs) I watched on youtube to essentially create a scrollable page *with no scroll*. As the user scrolls through the page, the distance that they scroll is tracked through a 'wheel' event listener and conditional renders a section of the page.
+I was inspired by a [video](https://www.youtube.com/watch?v=4yBxb5RQxPs) I watched on YouTube to create a scrollable page..., *but with no scroll*. As the user navigates through the page, the distance that they scroll is tracked through a **'wheel'** event listener and conditional renders a section of the page.
 
 > The amount of time I spent iterating on and debugging this feature should be studied :confounded:
 
@@ -54,16 +54,16 @@ I've learned over my journey that the best tips for web design is to just *keep 
 
 There are six sections in this page **('Home', 'Education', 'Experience', 'Projects', 'Extracurriculars', and 'Skills')**. To *keep things simple*, each section is made up of two sides: one side text to read, and the other, media to look at. The sides alternate throughout the page.
 
-### Color Scheme 
+### Color Scheme :sparkles:
 
 The two colors I used for highlighting text were a pink gradient and a blue gradient. **Simple.** Dark mode was configured through Tailwind variants which made it really easy to decide both aesthethics per component.
 
 ### Card Component :blue_heart:
 
-One of the things I am most proud of is the card component of my site. It is used in three sections and consists of a title, a caption, and a timeframe; however, it can expand to show more information
+One of the things I am most proud of is the card component of my site. It is used in three sections and consists of a title, a caption, and a timeframe; however, it can expand to show more information.
 
 ![Card Component](/src/assets/demo/card.png)
 
 ## AI Usage :smirk:
 
-The only AI tool I used in the process of building was **Google Antigravity**. I used it only two days out all my build days, but it was extremely helpful in layout the groundwork for some of my components. All of the prompts that I used during my building process are list in the PROMPTS.md file
+The only AI tool I used in the process of building was **Google Antigravity**. I used it only two days out all my build days, but it was extremely helpful in layout the groundwork for some of my components. All of the prompts that I used during my building process are list in the PROMPTS.md file.
