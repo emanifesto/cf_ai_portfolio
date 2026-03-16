@@ -1,7 +1,7 @@
 Skip the fluff and see for yourself - [Portfolio](https://damisaas.com/founder) :point_left:
 
 
-# *Features* Rundown :target:
+# *Features* Rundown :bullseye:
 
 - Retrieval Augmented Generation
 - Dynamic Image Generation
@@ -20,9 +20,9 @@ The entire three stage process of uploading documents, generating embeddings, an
 
 ### Listed AI Models in Use
 
-Embeddings Model - '@cf/baai/bge-base-en-v1.5'
+Embeddings Model - ['@cf/baai/bge-base-en-v1.5'](https://developers.cloudflare.com/workers-ai/models/bge-base-en-v1.5/)
 
-Text Generation Model - '@cf/meta/llama-3-8b-instruct'
+Text Generation Model - ['@cf/meta/llama-3-8b-instruct'](https://developers.cloudflare.com/workers-ai/models/llama-3-8b-instruct/)
 
 
 ## Image Generation :framed_picture:
@@ -33,8 +33,7 @@ Some results are amazing, some are subpar. Hopefully, recruiters don't see the b
 
 ![Generated Image](/src/assets/demo/imageGen.png)
 
-Image Generation Model- '@cf/black-forest-labs/flux-2-klein-4b'
-
+Image Generation Model- ['@cf/black-forest-labs/flux-2-klein-4b'](https://developers.cloudflare.com/workers-ai/models/flux-2-klein-4b/)
 
 ## Seamless Scroll :ok_hand:
 
